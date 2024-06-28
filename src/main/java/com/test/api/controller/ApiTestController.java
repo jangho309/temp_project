@@ -52,6 +52,22 @@ public class ApiTestController {
         return mav;
     }
 
+    @GetMapping("/sidebar")
+    public ModelAndView sidebar() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("side-bar");
+
+        return mav;
+    }
+
+    @GetMapping("/sidebar_none")
+    public ModelAndView sidebar_none() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("side-bar(long_none)");
+
+        return mav;
+    }
+
     @GetMapping("/getData")
     public void getData() {
         logger.debug("getData 실행");

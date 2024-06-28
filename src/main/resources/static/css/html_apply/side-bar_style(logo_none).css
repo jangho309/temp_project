@@ -5,7 +5,7 @@
 /* 글꼴 */
 @font-face {
     font-family: 'pretendard-semibold';
-    src: url('../static/webfonts/woff/Pretendard-SemiBold.woff');
+    src: url('../../webfonts/woff/Pretendard-SemiBold.woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,6 +14,7 @@ body {
     font-family: 'pretendard-semibold';
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 #side-bar {
