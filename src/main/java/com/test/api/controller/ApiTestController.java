@@ -28,6 +28,22 @@ public class ApiTestController {
         return mav;
     }
 
+    @GetMapping("/login")
+    public ModelAndView login() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("login");
+
+        return mav;
+    }
+
+    @GetMapping("/join")
+    public ModelAndView join() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("join");
+
+        return mav;
+    }
+
     @GetMapping("/kakaoMap")
     public ModelAndView kakaoMap() {
         ModelAndView mav = new ModelAndView();

@@ -3,24 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>kakao Map 호출</title>
-    <link href="../static/css/reset.css" rel="stylesheet"/>
-    <link href="../static/css/kakaoMap.css" rel="stylesheet"/>
-    <link href="../static/css/html_apply/maincourse.css" rel="stylesheet"/>
-    <script src="../static/js/jquery-3.7.1.min.js"></script>
-    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b65896833a405b71281c94d1dd53a4de&libraries=services"></script> -->
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../images/nextpin_logo.png">
+    <link href="css/kakaoMap.css" rel="stylesheet"/>
+    <link href="css/html_apply/maincourse.css" rel="stylesheet"/>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b65896833a405b71281c94d1dd53a4de&libraries=services"></script>
 </head>
 <body>
-    <nav>
-        <div>
-            <img src="../images/icon_course_pin.png" alt="코스 이미지">
+    <nav class="nav-wrapper">
+        <div class="nav-menu">
+            <div class="nav_icon_course">
+                <img src="../images/icon_course_pin.png" alt="핀">
+                <li>장소추천</li>
+                <li>My Pin</li>
+            </div>
+            <div class="nav_icon">
+                <img src="../images/icon_callendar.png" alt="캘린더">
+                <p>일정</p>
+            </div>
+            <div class="nav_icon">
+                <img src="../images/icon_chat_blue.png" alt="커뮤니티">
+                <p>커뮤니티</p>
+            </div>
+            <div class="nav_icon">
+                <img src="../images/icon_roulette_blue.png" alt="랜댐룰렛">
+                <p>랜덤 핀</p>
+            </div>
+        </div>
+        <div class="nav_mypage">
+            <a href="#">
+                <img src="../images/icon_mypage.png" alt="마이페이지">
+            </a>
         </div>
     </nav>
-            <!-- 다른 정보 박스들 -->
+    <div class="course_detail">
+        <div class="logo">
+            <img src="../images/icon_NextPin_mini.png" alt="NextPin Logo">
         </div>
-
-<!--        <div class="map_wrap">-->
-<!--            <div id="map" style="width:75%;height:100%;margin-left:25%;position:relative;overflow:hidden;"></div>-->
-<!--        </div>-->
+        <div class="input-group mb-3">
+            <input type="text" id="inputPlace" class="form-control" placeholder="오늘은 어디로 가시겠어요?">
+            <button class="btn" type="button" id="button-glasses">
+                <img src="../images/icon_glasses.png" alt="돋보기">
+            </button>
+        </div>
+    </div>
+    <div class="map_wrap">
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+    </div>
 
 
     <script>
