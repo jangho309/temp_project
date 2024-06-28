@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NextPin</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <style>
+        /* 전체 스타일 */
+        body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        }
+
+        /* 헤더 스타일 */
+        header {
+        background-color: #2196F3;
+        padding: 20px;
+        text-align: center;
+        }
+
+        .search-bar input {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        width: 60%;
+        }
+
+        .search-bar button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        /* 메인 콘텐츠 스타일 */
+        .map-container {
+        height: 400px;
+        background-color: #f1f1f1;
+        }
+
+        .info-section {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        }
+
+        .info-box {
+        display: flex;
+        align-items: center;
+        width: 400px;
+        background-color: #f1f1f1;
+        border-radius: 4px;
+        margin: 0 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box img {
+        width: 150px;
+        height: 150px;
+        border-radius: 4px 0 0 4px;
+        }
+
+        .info-content {
+        flex-grow: 1;
+        padding: 20px;
+        }
+
+        .info-content h3 {
+        margin-top: 0;
+        }
+
+        .info-content a {
+        color: #2196F3;
+        text-decoration: none;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        }
+    </style>
+    <header>
+        <div class="search-bar">
+            <input type="text" placeholder="어디로 가시나요?">
+            <button>검색</button>
+        </div>
+    </header>
+  
+    <main>
+        <div class="map-container">
+        <!-- 지도 영역 -->
+        </div>
+        
+        <div class="info-section">
+            <div class="info-box">
+                <img src="food.jpg" alt="음식 이미지">
+                <div class="info-content">
+                <h3>내 주변 맛집</h3>
+                <p>내 주변 인기 맛집을 확인해보세요</p>
+                <a href="#">더 보기</a>
+                </div>
+            </div>
+        
+            <div class="info-box">
+                <img src="shopping.jpg" alt="쇼핑 이미지">
+                <div class="info-content">
+                <h3>쇼핑하기</h3>
+                <p>근처 인기 쇼핑몰을 둘러보세요</p>
+                <a href="#">더 보기</a>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+        <p>&copy; 2023 NextPin. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,514 @@
+[2024-06-27 19:05:20:2004] INFO  [com.test.api.ApiApplication.logStarting:50] - Starting ApiApplication using Java 17.0.10 with PID 13512 (C:\02_workspace\api\out\production\classes started by jangho in C:\02_workspace\api)
+[2024-06-27 19:05:20:2011] DEBUG [com.test.api.ApiApplication.logStarting:51] - Running with Spring Boot v3.3.1, Spring v6.1.10
+[2024-06-27 19:05:20:2016] INFO  [com.test.api.ApiApplication.logStartupProfileInfo:654] - No active profile set, falling back to 1 default profile: "default"
+[2024-06-27 19:05:20:2018] DEBUG [org.springframework.boot.SpringApplication.load:687] - Loading source class com.test.api.ApiApplication
+[2024-06-27 19:05:20:2124] INFO  [org.springframework.boot.devtools.restart.ChangeableUrls.logTo:252] - The Class-Path manifest attribute in C:\Users\jangh\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\21.9.0.0\1aad2e20684ee075bb9ebdca2d83f028e4fd35fa\ojdbc11-21.9.0.0.jar referenced one or more files that do not exist: file:/C:/Users/jangh/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/21.9.0.0/1aad2e20684ee075bb9ebdca2d83f028e4fd35fa/oraclepki.jar
+[2024-06-27 19:05:20:2124] DEBUG [org.springframework.boot.devtools.restart.ChangeableUrls.logTo:251] - Matching URLs for reloading : [file:/C:/02_workspace/api/out/production/classes/, file:/C:/02_workspace/api/out/production/resources/]
+[2024-06-27 19:05:20:2124] DEBUG [org.springframework.boot.devtools.settings.DevToolsSettings.logTo:251] - Included patterns for restart : []
+[2024-06-27 19:05:20:2125] DEBUG [org.springframework.boot.devtools.settings.DevToolsSettings.logTo:251] - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+[2024-06-27 19:05:20:2125] INFO  [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:252] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-06-27 19:05:20:2125] INFO  [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:252] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-06-27 19:05:20:2126] DEBUG [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.prepareRefresh:671] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@631b1044
+[2024-06-27 19:05:20:2464] DEBUG [org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\controller\ApiTestController.class]
+[2024-06-27 19:05:20:2481] DEBUG [org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\controller\ExcelManageRestController.class]
+[2024-06-27 19:05:20:2529] DEBUG [org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\service\impl\ExcelManageRestServiceImpl.class]
+[2024-06-27 19:05:20:2543] DEBUG [org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\service\impl\KakaoMapDataRestoreImpl.class]
+[2024-06-27 19:05:20:2562] DEBUG [org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\service\impl\OctoparseDataImpl.class]
+[2024-06-27 19:05:20:2575] DEBUG [org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\service\impl\ReadBzyXmlImpl.class]
+[2024-06-27 19:05:23:4991] DEBUG [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.registerBeanDefinitions:247] - Searching for mappers annotated with @Mapper
+[2024-06-27 19:05:23:4992] DEBUG [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.lambda$registerBeanDefinitions$0:251] - Using auto-configuration base package 'com.test.api'
+[2024-06-27 19:05:23:5701] DEBUG [org.apache.ibatis.logging.LogFactory.setImplementation:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+[2024-06-27 19:05:23:5709] DEBUG [org.mybatis.spring.mapper.ClassPathMapperScanner.scanCandidateComponents:476] - Identified candidate component class: file [C:\02_workspace\api\out\production\classes\com\test\api\mapper\DataMapper.class]
+[2024-06-27 19:05:23:5712] DEBUG [org.mybatis.spring.mapper.ClassPathMapperScanner.debug:49] - Creating MapperFactoryBean with name 'dataMapper' and 'com.test.api.mapper.DataMapper' mapperInterface
+[2024-06-27 19:05:24:6369] DEBUG [org.springframework.ui.context.support.UiApplicationContextUtils.initThemeSource:86] - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@7eab3ffd]
+[2024-06-27 19:05:25:7261] DEBUG [org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getArchiveFileDocumentRoot:81] - Code archive: C:\Users\jangh\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\3.3.1\2c5cfe68bc12646ce44663f865d39c747a28f2c7\spring-boot-3.3.1.jar
+[2024-06-27 19:05:25:7262] DEBUG [org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getExplodedWarFileDocumentRoot:125] - Code archive: C:\Users\jangh\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\3.3.1\2c5cfe68bc12646ce44663f865d39c747a28f2c7\spring-boot-3.3.1.jar
+[2024-06-27 19:05:25:7263] DEBUG [org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.logNoDocumentRoots:149] - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+[2024-06-27 19:05:25:7499] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:111] - Tomcat initialized with port 8080 (http)
+[2024-06-27 19:05:25:7587] INFO  [org.apache.coyote.http11.Http11NioProtocol.log:173] - Initializing ProtocolHandler ["http-nio-8080"]
+[2024-06-27 19:05:25:7593] INFO  [org.apache.catalina.core.StandardService.log:173] - Starting service [Tomcat]
+[2024-06-27 19:05:25:7594] INFO  [org.apache.catalina.core.StandardEngine.log:173] - Starting Servlet engine: [Apache Tomcat/10.1.25]
+[2024-06-27 19:05:25:7701] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173] - Initializing Spring embedded WebApplicationContext
+[2024-06-27 19:05:25:7702] DEBUG [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290] - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+[2024-06-27 19:05:25:7703] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:296] - Root WebApplicationContext: initialization completed in 5576 ms
+[2024-06-27 19:05:25:7738] DEBUG [org.springframework.boot.web.servlet.ServletContextInitializerBeans.logMappings:235] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+[2024-06-27 19:05:25:7740] DEBUG [org.springframework.boot.web.servlet.ServletContextInitializerBeans.logMappings:235] - Mapping servlets: dispatcherServlet urls=[/]
+[2024-06-27 19:05:25:7808] DEBUG [org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter.init:240] - Filter 'requestContextFilter' configured for use
+[2024-06-27 19:05:25:7815] DEBUG [org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter.init:240] - Filter 'characterEncodingFilter' configured for use
+[2024-06-27 19:05:25:7815] DEBUG [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.init:240] - Filter 'formContentFilter' configured for use
+[2024-06-27 19:05:26:7875] DEBUG [com.zaxxer.hikari.HikariConfig.attemptFromContextLoader:974] - Driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1c694870
+[2024-06-27 19:05:26:7981] DEBUG [log4jdbc.debug.debug:372] - log4jdbc-logj2 properties initialization...
+[2024-06-27 19:05:26:7985] DEBUG [log4jdbc.debug.debug:372] - Using logger: null
+[2024-06-27 19:05:26:7985] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.debug.stack.prefix is not defined
+[2024-06-27 19:05:26:7986] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.sqltiming.warn.threshold is not defined
+[2024-06-27 19:05:26:7989] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.sqltiming.error.threshold is not defined
+[2024-06-27 19:05:26:7990] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+[2024-06-27 19:05:26:7990] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+[2024-06-27 19:05:26:7991] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+[2024-06-27 19:05:26:7993] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.statement.warn is not defined (using default value false)
+[2024-06-27 19:05:26:7994] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.select is not defined (using default value true)
+[2024-06-27 19:05:26:7995] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.insert is not defined (using default value true)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.update is not defined (using default value true)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.delete is not defined (using default value true)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.create is not defined (using default value true)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.drivers is not defined
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.trim.sql is not defined (using default value true)
+[2024-06-27 19:05:26:7996] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+[2024-06-27 19:05:26:7997] DEBUG [log4jdbc.debug.debug:372] - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+[2024-06-27 19:05:26:7997] DEBUG [log4jdbc.debug.debug:372] - log4jdbc-logj2 properties initialization done.
+[2024-06-27 19:05:26:7997] DEBUG [log4jdbc.debug.debug:372] - DriverSpy intialization...
+[2024-06-27 19:05:26:8056] DEBUG [log4jdbc.debug.debug:372] -   FOUND DRIVER oracle.jdbc.OracleDriver
+[2024-06-27 19:05:26:8057] DEBUG [log4jdbc.debug.debug:372] -   FOUND DRIVER oracle.jdbc.driver.OracleDriver
+[2024-06-27 19:05:26:8060] DEBUG [log4jdbc.debug.debug:372] - DriverSpy intialization done.
+[2024-06-27 19:05:26:8758] DEBUG [org.mybatis.spring.SqlSessionFactoryBean.debug:49] - Parsed mapper file: 'file [C:\02_workspace\api\out\production\resources\mappers\DataMapper.xml]'
+[2024-06-27 19:05:27:9026] DEBUG [_org.springframework.web.servlet.HandlerMapping.Mappings.detectHandlerMethods:294] - 
+	c.t.a.c.ApiTestController:
+	{GET [/]}: test()
+	{GET [/getData]}: getData()
+	{POST [/kakaoData]}: kakaoData(List)
+	{GET [/kakaoMap]}: kakaoMap()
+[2024-06-27 19:05:27:9034] DEBUG [_org.springframework.web.servlet.HandlerMapping.Mappings.detectHandlerMethods:294] - 
+	c.t.a.c.ExcelManageRestController:
+	{POST [/uploadExcel]}: uploadExcel(MultipartFile,HttpServletResponse)
+[2024-06-27 19:05:27:9039] DEBUG [_org.springframework.web.servlet.HandlerMapping.Mappings.detectHandlerMethods:294] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+[2024-06-27 19:05:27:9045] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.handlerMethodsInitialized:366] - 7 mappings in 'requestMappingHandlerMapping'
+[2024-06-27 19:05:27:9063] DEBUG [_org.springframework.web.servlet.HandlerMapping.Mappings.detectHandlers:86] - 'beanNameHandlerMapping' {}
+[2024-06-27 19:05:27:9208] DEBUG [_org.springframework.web.servlet.HandlerMapping.Mappings.logMappings:176] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+[2024-06-27 19:05:27:9240] DEBUG [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:264] - Initializing ExecutorService 'applicationTaskExecutor'
+[2024-06-27 19:05:27:9266] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:634] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-06-27 19:05:27:9370] DEBUG [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache:305] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-06-27 19:05:27:9504] DEBUG [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.afterPropertiesSet:319] - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+[2024-06-27 19:05:27:9526] DEBUG [org.springframework.jmx.support.JmxUtils.locateMBeanServer:127] - Found MBeanServer: com.sun.jmx.mbeanserver.JmxMBeanServer@574caa3f
+[2024-06-27 19:05:27:9538] DEBUG [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.afterPropertiesSet:131] - Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+[2024-06-27 19:05:27:9691] DEBUG [org.springframework.boot.devtools.livereload.LiveReloadServer.start:113] - Starting live reload server on port 35729
+[2024-06-27 19:05:27:9696] INFO  [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:59] - LiveReload server is running on port 35729
+[2024-06-27 19:05:27:9715] DEBUG [org.springframework.jmx.export.annotation.AnnotationMBeanExporter.afterSingletonsInstantiated:450] - Registering beans for JMX exposure on startup
+[2024-06-27 19:05:27:9715] DEBUG [org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeans:557] - Auto-detecting user-defined JMX MBeans
+[2024-06-27 19:05:27:9718] DEBUG [org.springframework.jmx.export.annotation.AnnotationMBeanExporter.autodetect:911] - Bean with name 'dataSource' has been autodetected for JMX exposure
+[2024-06-27 19:05:27:9733] DEBUG [org.springframework.jmx.export.annotation.AnnotationMBeanExporter.registerBeanInstance:684] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[2024-06-27 19:05:27:9745] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.start:466] - Starting beans in phase -2147483647
+[2024-06-27 19:05:27:9746] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.doStart:291] - Successfully started bean 'springBootLoggingLifecycle'
+[2024-06-27 19:05:27:9746] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.start:466] - Starting beans in phase 2147481599
+[2024-06-27 19:05:27:9748] INFO  [org.apache.coyote.http11.Http11NioProtocol.log:173] - Starting ProtocolHandler ["http-nio-8080"]
+[2024-06-27 19:05:27:9783] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:243] - Tomcat started on port 8080 (http) with context path '/'
+[2024-06-27 19:05:27:9785] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.doStart:291] - Successfully started bean 'webServerStartStop'
+[2024-06-27 19:05:27:9786] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.start:466] - Starting beans in phase 2147482623
+[2024-06-27 19:05:27:9786] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.doStart:291] - Successfully started bean 'webServerGracefulShutdown'
+[2024-06-27 19:05:27:9786] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.start:466] - Starting beans in phase 2147483647
+[2024-06-27 19:05:27:9803] INFO  [com.test.api.ApiApplication.logStarted:56] - Started ApiApplication in 9.26 seconds (process running for 10.635)
+[2024-06-27 19:05:27:9805] DEBUG [org.springframework.boot.availability.ApplicationAvailabilityBean.onApplicationEvent:77] - Application availability state LivenessState changed to CORRECT
+[2024-06-27 19:05:27:9808] DEBUG [org.springframework.boot.devtools.restart.Restarter.logTo:251] - Creating new Restarter for thread Thread[main,5,main]
+[2024-06-27 19:05:27:9808] DEBUG [org.springframework.boot.devtools.restart.Restarter.logTo:251] - Immediately restarting application
+[2024-06-27 19:05:27:9809] DEBUG [org.springframework.boot.devtools.restart.Restarter.logTo:251] - Starting application com.test.api.ApiApplication with URLs [file:/C:/02_workspace/api/out/production/classes/, file:/C:/02_workspace/api/out/production/resources/]
+[2024-06-27 19:05:27:9811] DEBUG [org.springframework.boot.availability.ApplicationAvailabilityBean.onApplicationEvent:77] - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[2024-06-27 19:05:34:16692] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-06-27 19:05:34:16693] INFO  [org.springframework.web.servlet.DispatcherServlet.initServletBean:532] - Initializing Servlet 'dispatcherServlet'
+[2024-06-27 19:05:34:16693] DEBUG [org.springframework.web.servlet.DispatcherServlet.initMultipartResolver:533] - Detected StandardServletMultipartResolver
+[2024-06-27 19:05:34:16693] DEBUG [org.springframework.web.servlet.DispatcherServlet.initLocaleResolver:557] - Detected AcceptHeaderLocaleResolver
+[2024-06-27 19:05:34:16693] DEBUG [org.springframework.web.servlet.DispatcherServlet.initThemeResolver:583] - Detected FixedThemeResolver
+[2024-06-27 19:05:34:16694] DEBUG [org.springframework.web.servlet.DispatcherServlet.initRequestToViewNameTranslator:733] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@69ee81c5
+[2024-06-27 19:05:34:16694] DEBUG [org.springframework.web.servlet.DispatcherServlet.initFlashMapManager:797] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@511160a3
+[2024-06-27 19:05:34:16694] DEBUG [org.springframework.web.servlet.DispatcherServlet.initServletBean:549] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-06-27 19:05:34:16694] INFO  [org.springframework.web.servlet.DispatcherServlet.initServletBean:554] - Completed initialization in 1 ms
+[2024-06-27 19:05:34:16703] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/", parameters={}
+[2024-06-27 19:05:34:16718] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#test()
+[2024-06-27 19:05:34:16742] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:05:35:17009] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:05:35:17016] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/reset.css", parameters={}
+[2024-06-27 19:05:35:17016] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:05:35:17021] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:35:17021] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:35:17026] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:35:17031] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/reset.css.]
+[2024-06-27 19:05:35:17031] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:35:17038] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:35:17040] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:35:17061] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:05:35:17064] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:35 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:35:17108] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:05:35:17113] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:35:17778] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:05:35:17780] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:35:17783] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:35:17784] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:05:35:17785] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:35:17786] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:35:17791] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:35:17793] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:05:35:17794] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:35 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:35:17800] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:37:19189] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:05:37:19190] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:05:37:19191] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:05:37:19236] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:05:37:19254] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:05:37:19254] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:37:19257] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:37:19258] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:05:37:19259] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:37:19260] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:37:19262] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:37:19262] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:05:37:19263] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:37:19263] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:05:37:19263] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:37 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:37:19265] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:37:19266] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:37:19266] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:05:37:19267] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:37:19267] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:37:19268] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:37:19269] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:05:37:19269] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:37 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:37:19271] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:46:27888] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:05:46:27889] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:05:46:27889] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:05:46:27898] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:05:46:27917] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:05:46:27917] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:05:46:27921] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:46:27922] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:46:27928] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:46:27929] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:05:46:27929] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:46:27929] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:46:27929] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:05:46:27929] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:46:27930] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:46:27930] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:46:27930] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:46:27930] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:46:27931] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:05:46:27931] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:05:46:27932] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:46 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:46:27932] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:46 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:46:27933] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:46:27933] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:46:28065] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:05:46:28065] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:46:28071] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:46:28072] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:05:46:28072] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:46:28072] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:46:28073] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:46:28075] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:05:46:28075] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:46 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:46:28076] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:05:48:30724] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:05:48:30726] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:05:48:30729] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:05:48:30730] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:05:48:30731] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:05:48:30732] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:05:48:30737] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:05:48:30739] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:05:48:30739] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:05:48 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:05:48:30742] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:26:68722] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:26:68723] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:26:68725] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:26:68731] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:26:68757] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:26:68757] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:26:68758] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:26:68758] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:26:68761] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:26:68761] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:26:68762] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:26:68762] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:26:68763] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:26:68763] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:26:68764] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:26:68764] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:26:68765] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:26:68765] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:26:68767] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:26:68768] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:26 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:26:68769] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:26:68770] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:26:68770] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:26 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:26:68773] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:27:68921] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:06:27:68923] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:27:68931] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:27:68932] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:06:27:68933] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:27:68936] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:27:68939] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:27:68941] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:06:27:68943] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:27 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:27:68948] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:29:71063] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:29:71063] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:29:71065] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:29:71074] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:29:71088] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:29:71089] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:29:71089] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:29:71090] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:29:71091] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:29:71091] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:29:71092] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:29:71092] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:29:71093] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:29:71093] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:29:71093] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:29:71093] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:29:71094] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:29:71095] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:29:71095] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:29:71096] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:29 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:29:71096] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:29:71097] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:29 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:29:71098] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:29:71102] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:29:71192] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:06:29:71194] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:29:71197] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:29:71202] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:06:29:71203] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:29:71204] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:29:71206] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:29:71207] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:06:29:71208] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:29 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:29:71210] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:30:72756] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:30:72756] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:30:72757] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:30:72761] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:30:72779] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:30:72781] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:30:72781] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:30:72784] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:30:72785] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:30:72785] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:30:72786] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:30:72786] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:30:72787] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:30:72787] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:30:72787] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:30:72787] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:30:72787] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:30:72789] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:30 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:30:72789] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:30:72791] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:30:72792] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:30:72793] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:30:72794] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:30 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:30:72796] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:31:72925] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:06:31:72926] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:31:72928] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:31:72929] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:06:31:72930] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:31:72931] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:31:72934] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:31:72936] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:06:31:72937] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:31 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:31:72939] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:32:74503] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:32:74503] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:32:74505] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:32:74509] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:32:74522] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:32:74522] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:32:74526] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:32:74527] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:32:74527] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:32:74527] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:32:74528] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:32:74528] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:32:74529] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:32:74531] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:32:74531] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:32:74531] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:32 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:32:74532] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:32:74532] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:32:74533] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:32:74533] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:32:74534] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:32:74535] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:32:74536] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:32 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:32:74538] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:33:74842] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:06:33:74843] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:33:74846] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:33:74850] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:06:33:74851] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:33:74852] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:33:74853] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:33:74854] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:06:33:74855] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:33 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:33:74858] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:36:78413] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:36:78414] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:36:78415] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:36:78421] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:36:78433] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:36:78433] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:36:78434] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:36:78434] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:36:78437] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:36:78437] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:36:78437] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:36:78437] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:36:78439] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:36:78439] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:36:78439] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:36:78439] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:36:78440] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:36:78440] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:36:78441] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:36:78441] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:36:78441] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:36 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:36:78441] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:36 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:36:78442] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:36:78442] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:36:78593] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:06:36:78594] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:36:78599] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:36:78601] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:06:36:78601] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:36:78602] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:36:78604] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:36:78606] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:06:36:78607] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:36 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:36:78610] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:44:86722] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:44:86722] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:44:86724] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:44:86732] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:44:86755] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:44:86756] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:44:86765] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:44:86766] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:44:86766] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:44:86767] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:44:86768] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:44:86770] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:44:86771] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:44 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:44:86773] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:44:86776] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:44:86782] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:44:86787] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:44:86788] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:44:86789] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:44:86790] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:44:86791] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:44:86792] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:44:86795] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:44 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:44:86798] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:45:86921] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/favicon.ico", parameters={}
+[2024-06-27 19:06:45:86922] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:45:86927] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:45:86929] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+[2024-06-27 19:06:45:86929] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:45:86930] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:45:86930] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:45:86932] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-06-27 19:06:45:86932] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:45 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:45:86933] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:47:89133] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/", parameters={}
+[2024-06-27 19:06:47:89135] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#test()
+[2024-06-27 19:06:47:89135] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:47:89141] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:47:89168] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:47:89168] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:47:89170] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/reset.css", parameters={}
+[2024-06-27 19:06:47:89171] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:47:89173] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:47:89175] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:47:89176] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/reset.css.]
+[2024-06-27 19:06:47:89177] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:47:89178] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:47:89180] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:47:89181] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:47:89182] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:47 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:47:89184] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:50:92546] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/", parameters={}
+[2024-06-27 19:06:50:92547] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#test()
+[2024-06-27 19:06:50:92549] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:50:92552] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:50:92580] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:50:92581] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:50:92586] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/reset.css", parameters={}
+[2024-06-27 19:06:50:92588] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:50:92588] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:50:92592] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:50:92593] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/reset.css.]
+[2024-06-27 19:06:50:92595] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:50:92596] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:50:92597] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:50:92598] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:50:92599] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:50 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:50:92601] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:52:94173] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:06:52:94174] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:06:52:94175] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:06:52:94182] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:06:52:94210] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/kakaoMap.css", parameters={}
+[2024-06-27 19:06:52:94210] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:52:94213] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:52:94214] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/kakaoMap.css.]
+[2024-06-27 19:06:52:94214] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:52:94216] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:52:94217] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:52:94218] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:06:52:94220] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:06:52:94220] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:06:52:94221] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:52 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:52:94224] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:06:52:94227] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:06:52:94227] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/jquery-3.7.1.min.js.]
+[2024-06-27 19:06:52:94227] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:06:52:94227] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:06:52:94228] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:06:52:94228] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-06-27 19:06:52:94229] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:06:52 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:06:52:94230] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:07:30:132492] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/", parameters={}
+[2024-06-27 19:07:30:132492] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#test()
+[2024-06-27 19:07:30:132493] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:07:30:132497] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:07:30:132509] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/static/css/reset.css", parameters={}
+[2024-06-27 19:07:30:132509] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:07:30:132510] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:07:30:132510] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:07:30:132511] DEBUG [org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest:584] - Resource not found
+[2024-06-27 19:07:30:132512] DEBUG [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException:705] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/css/reset.css.]
+[2024-06-27 19:07:30:132512] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 404 NOT_FOUND
+[2024-06-27 19:07:30:132513] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:07:30:132513] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - "ERROR" dispatch for GET "/error", parameters={}
+[2024-06-27 19:07:30:132513] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-06-27 19:07:30:132514] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.writeWithMessageConverters:275] - Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json]
+[2024-06-27 19:07:30:132515] DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.traceDebug:120] - Writing [{timestamp=Thu Jun 27 19:07:30 KST 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+[2024-06-27 19:07:30:132517] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1135] - Exiting from "ERROR" dispatch, status 404
+[2024-06-27 19:07:33:135059] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/kakaoMap", parameters={}
+[2024-06-27 19:07:33:135059] DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getHandler:531] - Mapped to com.test.api.controller.ApiTestController#kakaoMap()
+[2024-06-27 19:07:33:135060] DEBUG [org.springframework.web.servlet.view.ContentNegotiatingViewResolver.getBestView:354] - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-06-27 19:07:33:135099] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:07:33:135113] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/css/kakaoMap.css", parameters={}
+[2024-06-27 19:07:33:135114] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:07:33:135119] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:07:33:135119] DEBUG [org.springframework.web.servlet.DispatcherServlet.traceDebug:120] - GET "/js/jquery-3.7.1.min.js", parameters={}
+[2024-06-27 19:07:33:135125] DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.getHandler:531] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-06-27 19:07:33:135128] DEBUG [org.springframework.web.servlet.DispatcherServlet.logResult:1138] - Completed 200 OK
+[2024-06-27 19:07:47:149475] DEBUG [org.springframework.boot.availability.ApplicationAvailabilityBean.onApplicationEvent:77] - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[2024-06-27 19:07:47:149476] DEBUG [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.doClose:1125] - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@631b1044, started on Thu Jun 27 19:05:20 KST 2024
+[2024-06-27 19:07:47:149478] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.stop:478] - Stopping beans in phase 2147483647
+[2024-06-27 19:07:47:149479] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.lambda$doStop$4:350] - Bean 'applicationTaskExecutor' completed its stop procedure
+[2024-06-27 19:07:47:149479] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.stop:478] - Stopping beans in phase 2147482623
+[2024-06-27 19:07:47:149482] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.lambda$doStop$4:350] - Bean 'webServerGracefulShutdown' completed its stop procedure
+[2024-06-27 19:07:47:149483] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.stop:478] - Stopping beans in phase 2147481599
+[2024-06-27 19:07:47:149609] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.lambda$doStop$4:350] - Bean 'webServerStartStop' completed its stop procedure
+[2024-06-27 19:07:47:149609] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.stop:478] - Stopping beans in phase -2147483647
+[2024-06-27 19:07:47:149609] DEBUG [org.springframework.context.support.DefaultLifecycleProcessor.lambda$doStop$4:350] - Bean 'springBootLoggingLifecycle' completed its stop procedure
+[2024-06-27 19:07:47:149612] DEBUG [org.springframework.jmx.export.annotation.AnnotationMBeanExporter.destroy:468] - Unregistering JMX-exposed beans on shutdown
+[2024-06-27 19:07:47:149613] DEBUG [org.springframework.jmx.export.annotation.AnnotationMBeanExporter.unregisterBeans:186] - Unregistering JMX-exposed beans
+[2024-06-27 19:07:47:149613] DEBUG [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:328] - Shutting down ExecutorService 'applicationTaskExecutor'

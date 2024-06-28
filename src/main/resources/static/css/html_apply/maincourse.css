@@ -1,0 +1,17 @@
+/* 폰트설정 */
+@font-face {
+    font-family: 'pretendard-semibold';
+    src: url('../../webfonts/woff/Pretendard-SemiBold.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 전체 스타일 */
+body {
+    font-family: 'pretendard-semibold';
+    margin: 0;
+    display: flex;
+}
+
+nav {
+    margin: 1% 0 0 1%;
+}
