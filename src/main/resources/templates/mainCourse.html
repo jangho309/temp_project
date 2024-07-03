@@ -2,59 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>kakao Map 호출</title>
+    <title>코스 메인 화면</title>
     <link href="css/reset.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="../images/nextpin_logo.png">
     <link href="css/kakaoMap.css" rel="stylesheet"/>
-    <link href="css/html_apply/maincourse.css" rel="stylesheet"/>
+    <link href="css/html_apply/mainCourse.css" rel="stylesheet"/>
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b65896833a405b71281c94d1dd53a4de&libraries=services"></script>
 </head>
 <body>
-    <nav class="nav-wrapper">
-        <div class="nav-menu">
-            <div class="nav_icon_course">
-                <img src="../images/icon_course_pin.png" alt="핀">
-                <li>장소추천</li>
-                <li>My Pin</li>
-            </div>
-            <div class="nav_icon">
-                <img src="../images/icon_callendar.png" alt="캘린더">
-                <p>일정</p>
-            </div>
-            <div class="nav_icon">
-                <img src="../images/icon_chat_blue.png" alt="커뮤니티">
-                <p>커뮤니티</p>
-            </div>
-            <div class="nav_icon">
-                <img src="../images/icon_roulette_blue.png" alt="랜댐룰렛">
-                <p>랜덤 핀</p>
+    <!-- 사이드바 -->
+    <nav id="side-bar">
+        <div class="wrapper">
+            <!-- 메뉴들 -->
+            <div id="icons">
+                <div class="icon menu">
+                    <!-- 코스로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/pin-hover.png" alt="코스아이콘" id="course-icon">
+                        <span>코스</span>
+                    </a>
+                    <a href="#" class="link" id="recommendPlace">
+                        <li>장소추천</li>
+                    </a>
+                    <a href="#" class="link" id="myPin">
+                        <li>My Pin</li>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 일정으로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/calendar.png" alt="일정아이콘" id="calendar-icon">
+                        <span>일정</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 커뮤니티로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/community.png" alt="커뮤니티아이콘" id="community-icon">
+                        <span id="community-span">커뮤니티</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 랜덤핀으로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/random.png" alt="랜덤아이콘" id="random-icon">
+                        <span>랜덤핀</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="nav_mypage">
-            <a href="#">
-                <img src="../images/icon_mypage.png" alt="마이페이지">
-            </a>
+        <div id="profile">
+            <li class="menu">
+                <!-- 로그인으로 이동 -->
+                <a href="#" class="link">
+                    <img src="../images/profile.png" alt="기본 프로필 이미지">
+                </a>
+            </li>
         </div>
     </nav>
-    <div class="course_detail">
+
+    <div id="courseDetail" class="course_detail">
         <div class="logo">
             <img src="../images/icon_NextPin_mini.png" alt="NextPin Logo">
         </div>
-        <div class="input-group mb-3">
-            <input type="text" id="inputPlace" class="form-control" placeholder="오늘은 어디로 가시겠어요?">
-            <button class="btn" type="button" id="button-glasses">
-                <img src="../images/icon_glasses.png" alt="돋보기">
-            </button>
+        <form onsubmit="searchPlaces(); return false;">
+            <div class="input-group mb-3">
+                <input type="text" id="inputPlace" class="form-control" placeholder="오늘은 어디로 가시겠어요?" value="강남 고깃집">
+                <button class="btn" type="button" id="searchBtn">
+                    <img src="../images/icon_glasses.png" alt="돋보기">
+                </button>
+            </div>
+            <div class="course_rolling_msg">
+                <span>
+                    <img src="../images/icon_horse.png" alt="맛집 이미지">
+                    교복 데이트의 정석! 롯데월드
+                    <img src="../images/icon_heart.png" alt="맛집 이미지">
+                </span>
+            </div>
+            <div class="course_location_title">
+                <span>내 주변</span>
+            </div>
+            <div class="course_location_type">
+                <label id="course_food_label">
+                    <img src="../images/icon_foodPlace.png" alt="맛집 이미지"> #맛집
+                    <input type="radio" name="courseType" id="course_food" value="course_food" checked autocomplete="off">
+                </label>
+                <label id="course_caffe_label">
+                    <img src="../images/icon_caffePlace.png" alt="카페 이미지"> #카페
+                    <input type="radio" name="courseType" id="course_caffe" value="course_caffe" autocomplete="off">
+                </label>
+                <label id="course_tour_label">
+                    <img src="../images/icon_tourPlace.png" alt="맛집 이미지"> #관광지
+                    <input type="radio" name="courseType" id="course_tour" value="course_tour" autocomplete="off">
+                </label>
+                <label id="course_rest_label">
+                    <img src="../images/icon_lodgingPlace.png" alt="맛집 이미지"> #숙소
+                    <input type="radio" name="courseType" id="course_rest" value="course_rest" autocomplete="off">
+                </label>
+            </div>
+            <div id="locationList">
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
+        </form>
+    </div>
+    <div class="sidebar-arrow-container">
+        <div class="sidebar-toggle">
+            <img class="arrow-icon" src="../images/icon_toggleButton_arrow.png" alt="toggle icon">
         </div>
     </div>
     <div class="map_wrap">
-        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+        <div id="map" style="width:200%;height:100%;position:relative;"></div>
     </div>
-
     <script>
         var placeData = [];
         // 마커를 담을 배열입니다
@@ -81,14 +144,14 @@
         // 키워드 검색을 요청하는 함수입니다
         function searchPlaces() {
 
-            var keyword = document.getElementById('keyword').value;
+            var keyword = $('#inputPlace').val() === undefined ? "강남 고깃집" : $('#inputPlace').val();
 
             if (!keyword.replace(/^\s+|\s+$/g, '')) {
                 alert('키워드를 입력해주세요!');
                 return false;
             }
 
-            $("#keyword").val(keyword);
+            $("#inputPlace").val(keyword);
             // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
             // ps.keywordSearch( keyword, placesSearchCB);
             ps.keywordSearch(keyword, placesSearchCB
@@ -137,15 +200,15 @@
         function printResult(data) {
 
             console.log(++i + "번째 실행");
-            console.log(data);
-            console.log("print placeData : " + placeData);
+            // console.log(data);
+            // console.log("print placeData : " + placeData);
         }
 
         // 검색 결과 목록과 마커를 표출하는 함수입니다
         function displayPlaces(places) {
 
             var listEl = document.getElementById('placesList'),
-                menuEl = document.getElementById('menu_wrap'),
+                menuEl = document.getElementById('courseDetail'),
                 fragment = document.createDocumentFragment(),
                 bounds = new kakao.maps.LatLngBounds(),
                 listStr = '';
@@ -217,8 +280,9 @@
                     '   <h5>' + places.place_name + '</h5>';
 
             if (places.road_address_name) {
-                itemStr += '    <span>' + places.road_address_name + '</span>' +
-                    '   <span class="jibun gray">' +  places.address_name  + '</span>';
+                itemStr += '    <span>' + places.road_address_name + '</span>';
+                    // +
+                    // '   <span class="jibun gray">' +  places.address_name  + '</span>';
             } else {
                 itemStr += '    <span>' +  places.address_name  + '</span>';
             }
@@ -330,21 +394,84 @@
             });
         });
 
-        kakao.maps.event.addListener(map, 'center_changed', function() {
-
-            // 지도의  레벨을 얻어옵니다
-            var level = map.getLevel();
-
-            // 지도의 중심좌표를 얻어옵니다
-            var latlng = map.getCenter();
-
-            var message = '<p>지도 레벨은 ' + level + ' 이고</p>';
-            message += '<p>중심 좌표는 위도 ' + latlng.getLat() + ', 경도 ' + latlng.getLng() + '입니다</p>';
-
-            var resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = message;
-
+        $("input[name=courseType][value=course_food]").prop("checked", true);
+        $('#course_food_label').css('background', '#FFC061');
+        $("input[name=courseType]").on("click",function(){
+            // 맛집 선택시
+            if($(this).attr('id') === 'course_food'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#FFC061');
+                    $('#course_caffe_label').css('background', '#fff');
+                    $('#course_tour_label').css('background', '#fff');
+                    $('#course_rest_label').css('background', '#fff');
+                }
+            }
+            // 카페 선택시
+            else if($(this).attr('id') === 'course_caffe'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#fff');
+                    $('#course_caffe_label').css('background', '#FAB7B7');
+                    $('#course_tour_label').css('background', '#fff');
+                    $('#course_rest_label').css('background', '#fff');
+                }
+            }
+            // 관광지 선택시
+            else if($(this).attr('id') === 'course_tour'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#fff');
+                    $('#course_caffe_label').css('background', '#fff');
+                    $('#course_tour_label').css('background', '#96E781');
+                    $('#course_rest_label').css('background', '#fff');
+                }
+            }
+            // 숙소 선택시
+            else if($(this).attr('id') === 'course_rest'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#fff');
+                    $('#course_caffe_label').css('background', '#fff');
+                    $('#course_tour_label').css('background', '#fff');
+                    $('#course_rest_label').css('background', '#D7AFFF');
+                }
+            }
+            // console.log(this);
         });
+
+        $('#searchBtn').on("click", function(){
+            searchPlaces();
+        });
+
+        const sidebar = $('.course_detail');
+        const sidebarToggle = $('.sidebar-toggle');
+        let isExpand = false;
+
+        sidebarToggle.on('click', () => {
+            isExpand = !isExpand;
+            sidebar.toggle('open');
+
+            if(isExpand) {
+                $('.sidebar-toggle img').css({'transform': 'rotate(180deg)'});
+                return;
+            }
+
+            $('.sidebar-toggle img').css({'transform': 'rotate(0deg)'});
+            // sidebarContainer.classList.toggle('open');
+            // sidebarArrowContainer.classList.toggle('open');
+        });
+        // kakao.maps.event.addListener(map, 'center_changed', function() {
+        //
+        //     // 지도의  레벨을 얻어옵니다
+        //     var level = map.getLevel();
+        //
+        //     // 지도의 중심좌표를 얻어옵니다
+        //     var latlng = map.getCenter();
+        //
+        //     var message = '<p>지도 레벨은 ' + level + ' 이고</p>';
+        //     message += '<p>중심 좌표는 위도 ' + latlng.getLat() + ', 경도 ' + latlng.getLng() + '입니다</p>';
+        //
+        //     var resultDiv = document.getElementById('result');
+        //     resultDiv.innerHTML = message;
+        //
+        // });
     };
     </script>
 </body>

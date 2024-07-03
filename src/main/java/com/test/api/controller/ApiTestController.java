@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,9 +20,17 @@ public class ApiTestController {
     private final KakaoMapDataRestore kakaoMapDataRestore;
 
     @GetMapping("/")
-    public ModelAndView test() {
+    public ModelAndView index() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("index");
+
+        return mav;
+    }
+
+    @GetMapping("/test")
+    public ModelAndView test() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("test");
 
         return mav;
     }
@@ -44,10 +51,18 @@ public class ApiTestController {
         return mav;
     }
 
-    @GetMapping("/kakaoMap")
-    public ModelAndView kakaoMap() {
+    @GetMapping("/mainCourse")
+    public ModelAndView mainCourse() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("kakaoMap");
+        mav.setViewName("mainCourse");
+
+        return mav;
+    }
+
+    @GetMapping("/courseHomeReview")
+    public ModelAndView courseHomeReview() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("courseHomeReview");
 
         return mav;
     }

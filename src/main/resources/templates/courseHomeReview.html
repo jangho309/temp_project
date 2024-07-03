@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="../images/NP_pavicon.png">
+    <!-- 사이드바 스타일 시트 적용 -->
+    <link href="css/kakaoMap.css" rel="stylesheet"/>
+    <link href="css/html_apply/courseHomeReview.css" rel="stylesheet"/>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b65896833a405b71281c94d1dd53a4de&libraries=services"></script>
+</head>
+<body>
+    <!-- 사이드바 -->
+    <nav id="side-bar">
+        <div class="wrapper">
+            <div id="title">
+                <!-- 메인화면으로 이동 -->
+                <a href="#" class="link">
+                    <img src="../images/NP_icon.png" alt="NP아이콘">
+                </a>
+            </div>
+            <!-- 메뉴들 -->
+            <div id="icons">
+                <div class="icon menu">
+                    <!-- 코스로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/pin-hover.png" alt="코스아이콘" id="couse-icon">
+                        <span>코스</span>
+                    </a>
+                    <a href="#" class="link" id="recommendPlace">
+                        <li>장소추천</li>
+                    </a>
+                    <a href="#" class="link" id="myPin">
+                        <li>My Pin</li>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 일정으로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/calendar.png" alt="일정아이콘" id="calendar-icon">
+                        <span>일정</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 커뮤니티로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/community.png" alt="커뮤니티아이콘" id="community-icon">
+                        <span id="community-span">커뮤니티</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 랜덤핀으로 이동 -->
+                    <a href="#" class="link">
+                        <img src="../images/random.png" alt="랜덤아이콘" id="random-icon">
+                        <span>랜덤핀</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="profile">
+            <li class="menu">
+                <!-- 로그인으로 이동 -->
+                <a href="#" class="link">
+                    <img src="../images/profile.png" alt="기본 프로필 이미지">
+                </a>
+            </li>
+        </div>
+    </nav>
+    <div id="courseDetail" class="course_detail">
+<!--        <div class="logo">-->
+<!--            <img src="../images/icon_NextPin_mini.png" alt="NextPin Logo">-->
+<!--        </div>-->
+        <form onsubmit="searchPlaces(); return false;">
+            <div class="input-group mb-3">
+                <input type="text" id="inputPlace" class="form-control" placeholder="오늘은 어디로 가시겠어요?" value="강남 고깃집">
+                <button class="btn" type="button" id="searchBtn">
+                    <img src="../images/icon_glasses.png" alt="돋보기">
+                </button>
+            </div>
+        </form>
+        <div id="homeDetail">
+            <a href="mainCourse" id="backToMainCourse">
+                <img src="../images/icon_backButton2.png" alt="뒤로가기">
+            </a>
+            <img class="search_result_image" src="../images/homeImage.png" alt="검색장소 이미지">
+        </div>
+        <div id="homeTitle">
+            <h3 class="location_title">니뽕내뽕 강남역점
+                <span class="food_type">퓨전요리</span>
+            </h3>
+            <img class="icon_location" src="../images/icon_location.png" alt="위치 찍기">
+        </div>
+        <div id="reviewStatics">
+            <span id="reviewScore">★ 4.68</span>
+            <span id="reviewAll">리뷰 <a href="#">223</a>건</span>
+            <span id="reviewBlog">블로그 리뷰 <a href="#">13</a>건</span>
+        </div>
+        <div id="homeOrReview">
+            <span><a href="#" class="tab_menu" id="homeTab" aria-selected="true"><h4 id="goHome">홈</h4></a></span>
+            <span><a href="#" class="tab_menu" id="reviewTab" aria-selected="false"><h4 id="goReview">리뷰</h4></a></span>
+        </div>
+
+        <div id="homeContents">
+            <span class="location_modify_suggestion">
+                <a href="#" id="modifyLink">정보 수정 제안</a>
+            </span>
+            <h4>상세정보</h4>
+            <span class="location_address">
+                <img class="icon_location" src="../images/icon_location2.png" alt="위치 찍기">
+                서울 강남구 강남대로98길 8 2,3층
+            </span>
+            <span class="street_number">지번 | 역삼동 817</span>
+            <span class="location_time">
+                <img class="icon_location" src="../images/icon_clock.png" alt="시간">
+                <a href="#"> 영업중</a>
+                <li>월~금 11:30 ~ 21:30</li>
+                <li>토, 일 11:30 ~ 22:00</li>
+            </span>
+            <span class="location_url">
+                <img class="icon_location" src="../images/icon_url.png" alt="url주소">
+                <a href="#" id="locationUrl"> www.nipongnaepong.co.kr</a>
+            </span>
+            <span class="location_phone">
+                <img class="icon_location" src="../images/icon_phone.png" alt="전화번호">
+                02-557-5055
+            </span>
+            <span class="location_tag">
+                <img class="icon_location" src="../images/icon_tag.png" alt="태그">
+                <a href="#"> # 데이트코스</a>
+                <a href="#"> # 혼밥</a>
+            </span>
+        </div>
+        <div id="reviewContents" style="display:none;">
+            <span class="review_counts">
+                <h5>리뷰<a href="#"> 223</a></h5>
+            </span>
+            <div id="reviewList">
+                <ul id="reviewDetailList">
+                    <li class="review_item">
+                        <div style="display: flex;">
+                            <span class="user_review" id="userIcon">
+                                <img src="../images/profile.png" alt="기본 프로필 이미지">
+                                담곰
+                            </span>
+                            <span class="user_review" id="userAfterCourseDate1">
+                                 | 후기 8 코스 3 | 2024.05.08
+                            </span>
+                        </div>
+                        <div>
+                            <span class="user_score">
+                                ★★★★☆
+                            </span>
+                        </div>
+                        <div>
+                            <p class="user_review_content1">
+                                역시 크뽕은 주기적으로 먹어줘야 하는 것 같아요!
+                                너무너무 맛있어요ㅠㅠㅠ
+                                다만 서비스 측면에서 조금 아쉬웠던 부분이 있었던 것 같아요ㅠ
+                                그래도 다음에도 또 올께요!
+                                맛있게 잘 먹었습니다!
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-arrow-container">
+        <div class="sidebar-toggle">
+            <img class="arrow-icon" src="../images/icon_toggleButton_arrow.png" alt="toggle icon">
+        </div>
+    </div>
+    <div class="map_wrap">
+        <div id="map" style="width:100%;height:100vh;position:relative;overflow:hidden;"></div>
+    </div>
+    <script>
+        var placeData = [];
+        // 마커를 담을 배열입니다
+        var markers = [];
+
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        // 지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 장소 검색 객체를 생성합니다
+        var ps = new kakao.maps.services.Places();
+
+        // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+        // 키워드로 장소를 검색합니다
+        // searchPlaces();
+
+        // 키워드 검색을 요청하는 함수입니다
+        function searchPlaces() {
+
+            var keyword = $('#inputPlace').val() === undefined ? "강남 고깃집" : $('#inputPlace').val();
+
+            if (!keyword.replace(/^\s+|\s+$/g, '')) {
+                alert('키워드를 입력해주세요!');
+                return false;
+            }
+
+            $("#inputPlace").val(keyword);
+            // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+            // ps.keywordSearch( keyword, placesSearchCB);
+            ps.keywordSearch(keyword, placesSearchCB
+                , {
+                    radius : 500                  // 반경범위 미터 단위(0m ~ 20000m)
+                    // ,location: new kakao.maps.LatLng(37.566826, 126.9786567)
+                }
+            );
+        }
+
+        // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
+        function placesSearchCB(data, status, pagination) {
+            // console.log("placesSearchCB data : " + JSON.stringify(data));
+            if (status === kakao.maps.services.Status.OK) {
+                // console.log(data);
+                if(undefined !== data) {
+                    if (data.length > 0) {
+                        for (let idx in data) {
+                            placeData.push(data[idx]);
+                        }
+                    }
+                }
+
+                // console.log(placeData);
+                // 정상적으로 검색이 완료됐으면
+                // 검색 목록과 마커를 표출합니다
+                displayPlaces(data);
+                printResult(placeData);
+
+                // 페이지 번호를 표출합니다
+                // displayPagination(pagination);
+
+            } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+
+                alert('검색 결과가 존재하지 않습니다.');
+                return;
+
+            } else if (status === kakao.maps.services.Status.ERROR) {
+
+                alert('검색 결과 중 오류가 발생했습니다.');
+                return;
+
+            }
+        }
+        let i = 0;
+        function printResult(data) {
+
+            console.log(++i + "번째 실행");
+            console.log(data);
+            // console.log("print placeData : " + placeData);
+        }
+
+        // 검색 결과 목록과 마커를 표출하는 함수입니다
+        function displayPlaces(places) {
+
+            var listEl = document.getElementById('placesList'),
+                menuEl = document.getElementById('courseDetail'),
+                fragment = document.createDocumentFragment(),
+                bounds = new kakao.maps.LatLngBounds(),
+                listStr = '';
+
+            // 검색 결과 목록에 추가된 항목들을 제거합니다
+            // removeAllChildNods(listEl);
+
+            // 지도에 표시되고 있는 마커를 제거합니다
+            removeMarker();
+
+            for ( var i=0; i<places.length; i++ ) {
+
+                // 마커를 생성하고 지도에 표시합니다
+                var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
+                    marker = addMarker(placePosition, i),
+                    itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
+
+                // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+                // LatLngBounds 객체에 좌표를 추가합니다
+                bounds.extend(placePosition);
+
+                // 마커와 검색결과 항목에 mouseover 했을때
+                // 해당 장소에 인포윈도우에 장소명을 표시합니다
+                // mouseout 했을 때는 인포윈도우를 닫습니다
+                (function(marker, title) {
+                    kakao.maps.event.addListener(marker, 'mouseover', function() {
+                        displayInfowindow(marker, title);
+                    });
+
+                    kakao.maps.event.addListener(marker, 'mouseout', function() {
+                        infowindow.close();
+                    });
+
+                    itemEl.onmouseover =  function () {
+                        displayInfowindow(marker, title);
+                    };
+
+                    itemEl.onmouseout =  function () {
+                        infowindow.close();
+                    };
+                })(marker, places[i].place_name);
+
+                fragment.appendChild(itemEl);
+            }
+
+            // 검색결과 항목들을 검색결과 목록 Element에 추가합니다
+            // listEl.appendChild(fragment);
+            // menuEl.scrollTop = 0;
+
+            // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+            map.setBounds(bounds);
+        }
+
+        // 검색결과 항목을 Element로 반환하는 함수입니다
+        function getListItem(index, places) {
+
+            // for(key in places){
+            //     let rowData = {};
+            //     rowData.key = key;
+            //     rowData.value = places[key]
+            //     console.log("지도 데이터1 : " + JSON.stringify(placeData));
+            //     console.log("지도 데이터 개수: " + placeData.length);
+            //     placeData.push(rowData);
+            // }
+            // console.log("지도 데이터 : " + JSON.stringify(placeData));
+            var el = document.createElement('li'),
+                itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
+                    '<div class="info">' +
+                    '   <h5>' + places.place_name + '</h5>';
+
+            if (places.road_address_name) {
+                itemStr += '    <span>' + places.road_address_name + '</span>';
+                    // +
+                    // '   <span class="jibun gray">' +  places.address_name  + '</span>';
+            } else {
+                itemStr += '    <span>' +  places.address_name  + '</span>';
+            }
+
+            itemStr += '  <span class="tel">' + places.phone  + '</span>' +
+                '</div>';
+
+            el.innerHTML = itemStr;
+            el.className = 'item';
+
+            return el;
+        }
+
+        // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
+        function addMarker(position, idx, title) {
+            var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+                imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기
+                imgOptions =  {
+                    spriteSize : new kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기
+                    spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
+                    offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
+                },
+                markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
+                marker = new kakao.maps.Marker({
+                    position: position, // 마커의 위치
+                    image: markerImage
+                });
+
+            marker.setMap(map); // 지도 위에 마커를 표출합니다
+            markers.push(marker);  // 배열에 생성된 마커를 추가합니다
+
+            return marker;
+        }
+
+        // 지도 위에 표시되고 있는 마커를 모두 제거합니다
+        function removeMarker() {
+            for ( var i = 0; i < markers.length; i++ ) {
+                markers[i].setMap(null);
+            }
+            markers = [];
+        }
+
+        // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
+        function displayPagination(pagination) {
+            var paginationEl = document.getElementById('pagination'),
+                fragment = document.createDocumentFragment(),
+                i;
+
+            // 기존에 추가된 페이지번호를 삭제합니다
+            while (paginationEl.hasChildNodes()) {
+                paginationEl.removeChild (paginationEl.lastChild);
+            }
+
+            for (i=1; i<=pagination.last; i++) {
+                var el = document.createElement('a');
+                el.href = "#";
+                el.innerHTML = i;
+
+                if (i===pagination.current) {
+                    el.className = 'on';
+                } else {
+                    el.onclick = (function(i) {
+                        return function() {
+                            pagination.gotoPage(i);
+                        }
+                    })(i);
+                }
+
+                fragment.appendChild(el);
+            }
+            paginationEl.appendChild(fragment);
+        }
+
+        // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
+        // 인포윈도우에 장소명을 표시합니다
+        function displayInfowindow(marker, title) {
+            var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
+
+            infowindow.setContent(content);
+            infowindow.open(map, marker);
+        }
+
+        // 검색결과 목록의 자식 Element를 제거하는 함수입니다
+        function removeAllChildNods(el) {
+            while (el.hasChildNodes()) {
+                el.removeChild (el.lastChild);
+            }
+        }
+
+    window.onload = function(){
+        searchPlaces();
+        // printResult();
+        $("#dataChk").on("click", function(){
+            $.ajax({
+                method : "POST",
+                headers : {
+                    'content-type':'application/json'
+                },
+                url : "/kakaoData",
+                async : true,
+                dataType: "json",
+                data : JSON.stringify(placeData),
+                success : function(result){
+                    console.log("ajax : result : " + result);
+                },
+                error : function(request, status, error){
+                    console.log(error);
+                }
+            });
+        });
+
+        $("input[name=courseType][value=course_food]").prop("checked", true);
+        $('#course_food_label').css('background', '#FFC061');
+        $("input[name=courseType]").on("click",function(){
+            // 맛집 선택시
+            if($(this).attr('id') === 'course_food'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#FFC061');
+                    $('#course_caffe_label').css('background', '#fff');
+                    $('#course_tour_label').css('background', '#fff');
+                    $('#course_rest_label').css('background', '#fff');
+                }
+            }
+            // 카페 선택시
+            else if($(this).attr('id') === 'course_caffe'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#fff');
+                    $('#course_caffe_label').css('background', '#FAB7B7');
+                    $('#course_tour_label').css('background', '#fff');
+                    $('#course_rest_label').css('background', '#fff');
+                }
+            }
+            // 관광지 선택시
+            else if($(this).attr('id') === 'course_tour'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#fff');
+                    $('#course_caffe_label').css('background', '#fff');
+                    $('#course_tour_label').css('background', '#96E781');
+                    $('#course_rest_label').css('background', '#fff');
+                }
+            }
+            // 숙소 선택시
+            else if($(this).attr('id') === 'course_rest'){
+                if($(this).is(':checked')) {
+                    $('#course_food_label').css('background', '#fff');
+                    $('#course_caffe_label').css('background', '#fff');
+                    $('#course_tour_label').css('background', '#fff');
+                    $('#course_rest_label').css('background', '#D7AFFF');
+                }
+            }
+            // console.log(this);
+        });
+
+        $('#searchBtn').on("click", function(){
+            searchPlaces();
+        });
+
+        const sidebar = $('.course_detail');
+        const sidebarToggle = $('.sidebar-toggle');
+        let isExpand = false;
+
+        sidebarToggle.on('click', () => {
+            isExpand = !isExpand;
+            sidebar.toggle('open');
+
+            if(isExpand) {
+                $('.sidebar-toggle img').css({'transform': 'rotate(180deg)'});
+                return;
+            }
+
+            $('.sidebar-toggle img').css({'transform': 'rotate(0deg)'});
+            // sidebarContainer.classList.toggle('open');
+            // sidebarArrowContainer.classList.toggle('open');
+        });
+
+        $('#homeTab').on('click', function(){
+            $('#homeTab').attr('aria-selected', true);
+            $('#reviewTab').attr('aria-selected', false);
+            $('#homeContents').css('display', 'flex');
+            $('#reviewContents').css('display', 'none');
+        });
+
+        $('#reviewTab').on('click', function(){
+            $('#reviewTab').attr('aria-selected', true);
+            $('#homeTab').attr('aria-selected', false);
+            $('#homeContents').css('display', 'none');
+            $('#reviewContents').css('display', 'block');
+        });
+    };
+    </script>
+</body>
+</html>
