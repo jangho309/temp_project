@@ -43,7 +43,7 @@ body {
 }
 
 /* 코스, 일정, 커뮤니티, 랜덤, 프로필 리스트 */
-li {
+#course-menu li {
     list-style: none;
     text-align: center;
     margin-bottom: 80px;
@@ -63,19 +63,19 @@ li {
 
 /* 호버 이벤트 적용 파랑색 -> 노란색 */
 .icon #couse-icon:hover {
-    content: url("../images/pin-hover.png");
+    content: url("../../images/pin-hover.png");
 }
 
 .icon #calendar-icon:hover {
-    content: url("../images/calendar-hover.png");
+    content: url("../../images/icon_calendar-hover.png");
 }
 
 .icon #community-icon:hover {
-    content: url("../images/community-hover.png");
+    content: url("../../images/icon_community-hover.png");
 }
 
 .icon #random-icon:hover {
-    content: url("../images/random-hover.png");
+    content: url("../../images/icon_random-hover.png");
 }
 
 /* a태그 스타일 */

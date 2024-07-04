@@ -16,7 +16,7 @@ body {
     height: 100vh;
 }
 /* 좌측 상단 x 이미지 */
-a img {
+header img {
     position: fixed;
     width: 1vw;
     left: 2%;

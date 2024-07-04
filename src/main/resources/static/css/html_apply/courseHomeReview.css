@@ -27,7 +27,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
+#side-bar #myPin {
+    margin-bottom: 2%;
+}
 /* 코스, 일정, 커뮤니티, 랜덤핀 */
 #icons {
     width: 90px;
@@ -81,15 +83,15 @@ li::marker {
 /*}*/
 
 .icon #calendar-icon:hover {
-    content: url("../../images/calendar-hover.png");
+    content: url("../../images/icon_calendar-hover.png");
 }
 
 .icon #community-icon:hover {
-    content: url("../../images/community-hover.png");
+    content: url("../../images/icon_community-hover.png");
 }
 
 .icon #random-icon:hover {
-    content: url("../../images/random-hover.png");
+    content: url("../../images/icon_random-hover.png");
 }
 
 /* a태그 스타일 */
@@ -135,7 +137,7 @@ li::marker {
         height: 40px;
     }
 
-    .icon #couse-icon {
+    .icon #course-icon {
         width: 35px;
         height: 43px;
     }
@@ -281,11 +283,23 @@ a[aria-selected='false'] {
     border: 2px solid #40a0ff;
     border-radius: 10px;
 }
-/* 사이드바 토글 버튼*/
-.sidebar-toggle {
+/* 사이드바 토글 버튼 */
+.sidebar-arrow-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    text-align: center;
+    background-color: transparent;
+    transition: width 0.3s ease;
+    z-index: 2;
+}
+
+.sidebar-arrow-container .sidebar-toggle {
     position: absolute;
     top: 50vh;
-    left: 32%;
+    left: 30%;
     width: 50px;
     height: 80px;
     border-left: #fff;
@@ -300,15 +314,4 @@ a[aria-selected='false'] {
 }
 .sidebar-container.open {
     width: 200px;
-}
-.sidebar-arrow-container {
-    position: relative;
-    top: 0;
-    left: 0.7%;
-    height: 100%;
-    width: 30px;
-    text-align: center;
-    background-color: transparent;
-    transition: width 0.3s ease;
-    z-index: 2;
 }

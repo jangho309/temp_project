@@ -74,7 +74,7 @@ footer {
     color: #aaa;
 }
 /* 좌측 상단 x 이미지 */
-a img {
+header img {
     position: fixed;
     width: 2vw;
     left: 2%;

@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar-main {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-top: 5vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4.5vh;
+}
+
+#calendar .header {
+    margin: 0;
+}
+
+.header button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+#current-month-year {
+    font-size: 1.7em;
+    margin: 0 10px;
+}
+
+#calendar {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar .header {
+    background-color: #FFC671;
+    height: 40px;
+}
+
+/* 날짜 */
+#calendar .day {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* 비어있는 날짜 */
+#calendar .empty {
+    color: #f9f9f9;
+    border: 1px solid #ddd;
+    
+}
+
+.prev-month, .next-month{
+    color: #B3B3B3;
+}
+
+.saturday {
+    color: #17A1FA;
+}
+
+.sunday {
+    color: #FF1E1E;
+}
+
+#calendar-panel {
+    min-width: 25vw;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    display: none;
+}
+
+/* 반응형 페이지 미디어 쿼리문 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header button {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+
+    #current-month-year {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    #calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}

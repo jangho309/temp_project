@@ -27,10 +27,10 @@ public class ApiTestController {
         return mav;
     }
 
-    @GetMapping("/test")
-    public ModelAndView test() {
+    @GetMapping("/main")
+    public ModelAndView main() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("test");
+        mav.setViewName("main");
 
         return mav;
     }
@@ -43,10 +43,10 @@ public class ApiTestController {
         return mav;
     }
 
-    @GetMapping("/join")
-    public ModelAndView join() {
+    @GetMapping("/signUp")
+    public ModelAndView signUp() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("join");
+        mav.setViewName("signUp");
 
         return mav;
     }
@@ -67,6 +67,22 @@ public class ApiTestController {
         return mav;
     }
 
+    @GetMapping("/userPage")
+    public ModelAndView userPage() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("userPage");
+
+        return mav;
+    }
+
+    @GetMapping("/randomPin")
+    public ModelAndView randomPin() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("randomPin");
+
+        return mav;
+    }
+
     @GetMapping("/sidebar")
     public ModelAndView sidebar() {
         ModelAndView mav = new ModelAndView();
@@ -79,6 +95,62 @@ public class ApiTestController {
     public ModelAndView sidebar_none() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("side-bar(long_none)");
+
+        return mav;
+    }
+
+    @GetMapping("/calendar")
+    public ModelAndView calendar() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("calendar");
+
+        return mav;
+    }
+
+    @GetMapping("/myPin")
+    public ModelAndView myPin() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("myPin");
+
+        return mav;
+    }
+
+    @GetMapping("/community")
+    public ModelAndView community() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("community");
+
+        return mav;
+    }
+
+    @GetMapping("/courseMake")
+    public ModelAndView courseMake() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("courseMake");
+
+        return mav;
+    }
+
+    @GetMapping("/courseMake2")
+    public ModelAndView courseMake2() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("courseMake2");
+
+        return mav;
+    }
+
+    @GetMapping("/myCourse")
+    public ModelAndView myCourse() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("myCourse");
+
+        return mav;
+    }
+
+    @GetMapping("/test")
+    public ModelAndView test() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("test");
 
         return mav;
     }
