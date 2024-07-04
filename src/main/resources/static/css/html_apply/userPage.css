@@ -376,3 +376,23 @@ button, .modal-buttons button {
 .sidebar-container.open {
     width: 200px;
 }
+/* 장소 리스트 */
+.course-details {
+    margin-top: 4%;
+    height: 420px;
+    overflow-y: auto;
+}
+/* 스크롤바 가로길이 */
+.course-details::-webkit-scrollbar {
+    width: 10px;
+}
+/* 스크롤바 바영역 색상 */
+.course-details::-webkit-scrollbar-thumb {
+    background-color: #40a0ff;
+    border-radius: 5px;
+}
+/* 스크롤바 스크롤영역 색상 */
+.course-details::-webkit-scrollbar-track {
+    background-color: #E1E1E1;
+    border-radius: 5px;
+}

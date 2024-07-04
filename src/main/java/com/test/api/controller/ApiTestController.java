@@ -83,22 +83,6 @@ public class ApiTestController {
         return mav;
     }
 
-    @GetMapping("/sidebar")
-    public ModelAndView sidebar() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("side-bar");
-
-        return mav;
-    }
-
-    @GetMapping("/sidebar_none")
-    public ModelAndView sidebar_none() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("side-bar(long_none)");
-
-        return mav;
-    }
-
     @GetMapping("/calendar")
     public ModelAndView calendar() {
         ModelAndView mav = new ModelAndView();
@@ -143,14 +127,6 @@ public class ApiTestController {
     public ModelAndView myCourse() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("myCourse");
-
-        return mav;
-    }
-
-    @GetMapping("/test")
-    public ModelAndView test() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("test");
 
         return mav;
     }
