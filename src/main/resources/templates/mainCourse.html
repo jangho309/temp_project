@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>코스 메인 화면</title>
+    <title>NextPin</title>
     <link href="css/reset.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="../images/NP_pavicon.png">
@@ -25,11 +25,11 @@
                         <img src="../images/pin-hover.png" alt="코스아이콘" id="course-icon">
                         <span>코스</span>
                     </a>
-                    <a href="#" class="link" id="recommendPlace">
-                        <li>장소추천</li>
+                    <a href="courseHomeReview2" class="link" id="recommendPlace">
+                        <li style="font-size: 0.8rem">장소추천</li>
                     </a>
-                    <a href="#" class="link" id="myPin">
-                        <li>My Pin</li>
+                    <a href="myPin" class="link" id="myPin">
+                        <li style="font-size: 0.8rem">My Pin</li>
                     </a>
                 </div>
                 <div class="icon menu">
@@ -67,7 +67,9 @@
 
     <div id="courseDetail" class="course_detail">
         <div class="logo">
-            <img src="../images/icon_NextPin_mini.png" alt="NextPin Logo">
+            <a href="main" class="link">
+                <img src="../images/icon_NextPin_mini.png" alt="NextPin Logo">
+            </a>
         </div>
         <form onsubmit="searchPlaces(); return false;">
             <div class="input-group mb-3">

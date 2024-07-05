@@ -289,11 +289,17 @@ window.onload = function(){
     });
 };
 
+
+
 //각 목록에 지정한 10가지 색상 중 랜덤한 값이 들어가게 만들기.
 // 1. 10가지 색상 배열 만들기
-const colors=['#FFC061','#D4ADFB','#97E285','#F9A7A7','#1A70D6','#7BD0FF','#C8C8C8','#BADCE3','#AFA18E','#ECCCCF'];
-// 2. 모든 .card 클래스 요소 선택하기
+const colors=['#FFC061','#D4ADFB','#97E285','#fd7f7f','#1A70D6','#7BD0FF','#C8C8C8','#BADCE3','#AFA18E','#ECCCCF'];
+
+// 2. 모든 .card 클래스 요소 선택하기(일차별 색상)
 const cards = document.querySelectorAll('.card');
+// 2-1. 모든 .container 클래스 요소 선택(코스별 색상)
+const containers = document.querySelectorAll('.container');
+
 // 3. 각 .card 요소 내부의 모든 ul 태그 선택하기
 cards.forEach(card => {
     const uls = card.querySelectorAll('ul');
@@ -303,37 +309,71 @@ cards.forEach(card => {
     });
 });
 
-//각 코스 이름 수정하는 기능
-function editNameClick(){
-    const editName = document.getElementsByClassName('edit-name')
-    document.getElementById("edit-name2").value = '수정된 내용';
-}
+// 3-1. 각 .container 요소 내부의 모든 ul 태그 선택하기
 
-function editDescription() {
-    var p = document.getElementById('profile-description');
-    var textarea = document.getElementById('profile-textarea');
-    var editIcon = document.querySelector('.edit-icon');
 
+
+
+// 각 코스 이름을 수정하는 기능
+// function editNameClick() {
+//     // HTML 문서에서 class="edit-name"인 요소들을 가져옵니다.
+//     const editName = document.getElementsByClassName('edit-name');
+//
+//     // id="edit-name2"인 요소의 값을 "수정된 내용"으로 변경합니다.
+//     document.getElementById("edit-name2").value = '수정된 내용';
+// }
+
+function editDescription(icon) {
+    // icon 요소의 부모 요소(container)를 가져옵니다.
+    var container = icon.closest('.container');
+
+    // container 내의 profile-description, profile-textarea 요소를 가져옵니다.
+    var input = container.querySelector('.profile-description');
+    var textarea = container.querySelector('.profile-textarea');
+
+    // profile-textarea 요소가 숨겨져 있다면 (즉, 편집 모드가 아닌 경우)
     if (textarea.style.display === 'none' || textarea.style.display === '') {
-        textarea.value = p.textContent;
-        p.style.display = 'none';
+        // profile-textarea 요소의 값을 항상 profile-description 요소의 value 값으로 설정합니다.
+        textarea.value = input.value;
+
+        // profile-description 요소를 숨기고 profile-textarea 요소를 표시합니다.
+        input.style.display = 'none';
         textarea.style.display = 'block';
+
+        // profile-textarea 요소에 포커스를 맞춥니다.
         textarea.focus();
-        editIcon.src = '../images/save-icon.png'; // Save icon when editing
-    } else {
-        p.textContent = textarea.value;
-        p.style.display = 'block';
+
+        // edit-icon 요소의 이미지를 "save-icon.png"로 변경합니다.
+        icon.src = 'images/save-icon.png';
+    }
+    // 그렇지 않다면 (즉, 편집 모드인 경우)
+    else {
+        // profile-description 요소의 value 값을 profile-textarea 요소의 값으로 설정합니다.
+        input.value = textarea.value;
+
+        // profile-description 요소를 표시하고 profile-textarea 요소를 숨깁니다.
+        input.style.display = 'block';
         textarea.style.display = 'none';
-        editIcon.src = '../images/edit-icon.png'; // Edit icon when not editing
+
+        // edit-icon 요소의 이미지를 "edit-icon.png"로 변경합니다.
+        icon.src = 'images/edit-icon.png';
     }
 }
 
+
+
+// 링크 클릭 시 서브 메뉴 토글 기능
 const link = document.querySelector('.link');
 const subMenu = document.querySelector('.sub-menu');
 
+// 링크를 클릭하면 sub-menu 클래스에 'hidden' 클래스를 토글합니다.
 link.addEventListener('click', () => {
     subMenu.classList.toggle('hidden');
 });
+
+
+
+
 
 //사이드 네브바 열고 닫는 기능 구현
 window.onload = function(){
@@ -363,49 +403,142 @@ window.onload = function(){
 
 
 
+//관심있는 코스에서 저장 버튼을 누르면 캘린더가 뜨고 지정한 날짜에 저장할 수 있는 기능
+let isSaved = false;
+let currentIcon;
+
+function toggleSaveState(icon) {
+    currentIcon = icon;
+
+    if (!isSaved) {
+        // 캘린더 표시
+        $('#calendar-container').fadeIn();
+    } else {
+        // 이미지 변경 및 저장 상태 업데이트
+        icon.src = 'images/save-before-icon.png';
+        isSaved = false;
+
+        // 모달 표시
+        showModal('저장이 취소되었습니다');
+    }
+}
+
+$('#save-date-button').click(function() {
+    // 이미지 변경 및 저장 상태 업데이트
+    if (currentIcon && !isSaved) {
+        currentIcon.src = 'images/save-after-icon.png';
+        isSaved = true;
+        showModal('캘린더에 저장되었습니다');
+    } else if (currentIcon && isSaved) {
+        currentIcon.src = 'images/save-before-icon.png';
+        isSaved = false;
+        showModal('저장이 취소되었습니다');
+    }
+
+    // 캘린더 팝업 숨기기
+    $('#calendar-container').fadeOut();
+});
+
+function showModal(message) {
+    // 모달 메시지 설정
+    $('#modal-message').text(message);
+
+    // 모달 표시
+    $('#modal-overlay').fadeIn();
+    $('#modal').fadeIn();
+}
+
+$('#close-modal-button, #modal-overlay').click(function() {
+    // 모달 숨기기
+    $('#modal').fadeOut();
+    $('#modal-overlay').fadeOut();
+});
 
 
+// 검색 입력 값에 따라 항목을 필터링하는 함수
+function filterItems() {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
 
-
-
-
-
-
-
-
-
-
-// 미트볼 버튼에 팝업창 속성 추가하기
-
-// 모든 곳에서 팝오버 활성화(부트스트랩 제공 코드)
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
-})
-// 팝오버창에 있는 내용을 html으로 작성해서 적용시키는 코드
-// 팝오버창 내용을 html으로 따로 작성한다음 data-bs-name을 통해 접근하여 팝오버 바디에 적용
-$(() => {
-    var options = {
-        html: true,
-        //html element는 아래와 같이 작성
-        //content: $("#popover-content").html()
-        content: $('[data-bs-name="popover-content"]').html(),
-        placement: 'top'
-    };
-    // 모든 .meatball-btn 요소에 대해 팝오버 초기화
-    var popoverBtns = document.querySelectorAll('.meatball-btn');
-    popoverBtns.forEach(btn => {
-        var popover = new bootstrap.Popover(btn, options);
+    // .mypin-content 내의 항목을 필터링
+    const myPinItems = document.querySelectorAll('.mypin-content .container');
+    myPinItems.forEach(item => {
+        const value = item.querySelector('input').value.toLowerCase();
+        if (value.includes(searchValue)) {
+            item.parentElement.style.display = 'block'; // 부모 li 요소를 표시
+        } else {
+            item.parentElement.style.display = 'none'; // 부모 li 요소를 숨김
+        }
     });
 
-    // 팝오버 내부 콘텐츠 스타일 조정
-    // $('[data-bs-name="popover-content"]').css({
-    //     'backgroundColor': 'red',
-    //     'width': '300px' // 팝오버 최대 너비 설정
-    // });
-    const popoverContent = document.querySelector("#popover-content ul li");
-    popoverContent.style.color = 'red';
-});
+    // .like-content 내의 항목을 필터링
+    const likeItems = document.querySelectorAll('.like-content .container');
+    likeItems.forEach(item => {
+        const value = item.querySelector('input').value.toLowerCase();
+        if (value.includes(searchValue)) {
+            item.parentElement.style.display = 'block'; // 부모 li 요소를 표시
+        } else {
+            item.parentElement.style.display = 'none'; // 부모 li 요소를 숨김
+        }
+    });
+}
+
+// 검색 입력 창에 이벤트 리스너 추가
+document.getElementById('searchInput').addEventListener('input', filterItems);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // 미트볼 버튼에 팝업창 속성 추가하기
+//
+// // 모든 곳에서 팝오버 활성화(부트스트랩 제공 코드)
+// var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+// var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+//     return new bootstrap.Popover(popoverTriggerEl)
+// })
+// // 팝오버창에 있는 내용을 html으로 작성해서 적용시키는 코드
+// // 팝오버창 내용을 html으로 따로 작성한다음 data-bs-name을 통해 접근하여 팝오버 바디에 적용
+// $(() => {
+//     var options = {
+//         html: true,
+//         //html element는 아래와 같이 작성
+//         //content: $("#popover-content").html()
+//         content: $('[data-bs-name="popover-content"]').html(),
+//         placement: 'top'
+//     };
+//     // 모든 .meatball-btn 요소에 대해 팝오버 초기화
+//     var popoverBtns = document.querySelectorAll('.meatball-btn');
+//     popoverBtns.forEach(btn => {
+//         var popover = new bootstrap.Popover(btn, options);
+//     });
+//
+//     // 팝오버 내부 콘텐츠 스타일 조정
+//     // $('[data-bs-name="popover-content"]').css({
+//     //     'backgroundColor': 'red',
+//     //     'width': '300px' // 팝오버 최대 너비 설정
+//     // });
+//     const popoverContent = document.querySelector("#popover-content ul li");
+//     popoverContent.style.color = 'red';
+// });
 
 // // 팝오버 버튼 선택
 // const popoverBtn = document.querySelector('.meatball-btn');

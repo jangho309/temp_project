@@ -221,6 +221,7 @@ body {
     background-color: #ffffff; /* 배경색 */
 }
 
+
 .day {
     margin-bottom: 15px; /* 각 일차 사이의 여백 */
     padding: 10px; /* 내부 여백 */
@@ -287,7 +288,7 @@ body {
 }
 
 .ranking::-webkit-scrollbar-thumb {
-    background-color: #C8C8C8; /* 스크롤바 색상 */
+    background-color: #40a0ff;; /* 스크롤바 색상 */
     border-radius: 3px; /* 스크롤바 모양 */
 }
 

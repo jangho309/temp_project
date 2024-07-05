@@ -155,6 +155,7 @@ function getListItem(index, places) {
     // console.log("지도 데이터 : " + JSON.stringify(placeData));
     var el = document.createElement('li'),
         itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
+            '<a href="courseHomeReview2">' +
             '<div class="info">' +
             '   <h5>' + places.place_name + '</h5>';
 
@@ -167,6 +168,7 @@ function getListItem(index, places) {
     }
 
     itemStr += '  <span class="tel">' + places.phone  + '</span>' +
+        '</a>'  +
         '</div>';
 
     el.innerHTML = itemStr;

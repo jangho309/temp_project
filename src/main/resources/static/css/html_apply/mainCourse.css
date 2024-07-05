@@ -63,9 +63,13 @@ li::marker {
     width: 100px;
 }
 /* 호버 이벤트 적용 파랑색 -> 노란색 */
-/*.icon #course-icon:hover {*/
-/*    content: url("../../images/pin-hover.png");*/
-/*}*/
+#recommendPlace:hover {
+    color: #FFC061;
+}
+#myPin:hover {
+    color: #FFC061;
+}
+
 
 .icon #calendar-icon:hover {
     content: url("../../images/icon_calendar-hover.png");

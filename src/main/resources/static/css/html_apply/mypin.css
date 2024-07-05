@@ -47,9 +47,11 @@ body{
 p{
     display: inline-block;
 }
+
+/*스크롤바 속성*/
 .side-navbar {
     width: 50rem;
-    height: 100%;
+    height: 100vh;
     background-color: white;
     overflow-y: auto;
 }
@@ -113,6 +115,9 @@ p{
 }
 
 /*mypin,관심있는코스 목록 공통 속성*/
+.content ul{
+    padding-left: 0.1rem;
+}
 .content ul li .container{
     width: 24rem;
     text-align: center;
@@ -177,6 +182,7 @@ textarea{
     border: none;
     margin: auto;
     height: 3rem;
+    width: 24rem;
 }
 
 
@@ -259,4 +265,71 @@ textarea{
     background-color: transparent;
     transition: width 0.3s ease;
     z-index: 2;
+}
+
+
+
+
+
+/* 캘린더와 모달 스타일 추가 */
+.calendar-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px; /* 모달의 가로 크기 */
+    max-width: 30%; /* 모달의 최대 가로 크기 */
+    max-height: 30vh; /* 모달의 최대 세로 크기 (화면 높이의 30%) */
+    overflow-y: auto; /* 세로 스크롤이 필요할 경우 스크롤 바 표시 */
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#modal-message,#close-modal-button{
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+}
+#close-modal-button{
+    border-radius: 1rem;
+    border: none;
+    background-color: #4098FF;
+    width: 5rem;
+    height: 2rem;
+}
+#close-modal-button:hover{
+    background-color: #FFC061;
+}
+
+.calendar-container button,
+.modal button {
+    margin-top: 10px;
 }

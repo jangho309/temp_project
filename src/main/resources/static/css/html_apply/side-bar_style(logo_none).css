@@ -5,7 +5,7 @@
 /* 글꼴 */
 @font-face {
     font-family: 'pretendard-semibold';
-    src: url('../../webfonts/woff/Pretendard-SemiBold.woff');
+    src: url(../../static/webfonts/woff/Pretendard-SemiBold.woff);
     font-weight: normal;
     font-style: normal;
 }
@@ -14,7 +14,6 @@ body {
     font-family: 'pretendard-semibold';
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
 #side-bar {
@@ -22,8 +21,9 @@ body {
     height: 100vh;
     background-color: white;
     border-right: 1px solid #ddd;
-    top: 0;
-    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* 코스, 일정, 커뮤니티, 랜덤핀 div*/
@@ -34,7 +34,7 @@ body {
     margin: 0 auto;
 }
 /* 코스, 일정, 커뮤니티, 랜덤, 프로필 리스트 */
-li {
+.menu {
     list-style: none;
     text-align: center;
     margin-bottom: 80px;
@@ -70,7 +70,7 @@ li {
 }
 
 /* a태그 스타일 */
-a {
+.link {
     text-decoration: none;
     color: #131313;
 }
@@ -81,10 +81,9 @@ a {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    padding: 13% 8% 6% 8%;
+    padding: 13px 8px 6px 8px;
     margin: 0 auto;
-    position: relative;
-    top: 32.7vh;
+    margin-bottom: 20px;
 }
 
 /* 반응형 웹 디자인을 위한 미디어 쿼리 */
@@ -128,5 +127,11 @@ a {
         height: 40px;
         padding: 5%;
         top: 37.6vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    #profile {
+        top: 20vh; /* 노트북 화면에 맞게 위치 조정 */
     }
 }

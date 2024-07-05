@@ -78,9 +78,12 @@ li::marker {
     width: 100px;
 }
 /* 호버 이벤트 적용 파랑색 -> 노란색 */
-/*.icon #couse-icon:hover {*/
-/*    content: url("../../images/pin-hover.png");*/
-/*}*/
+#recommendPlace:hover {
+    color: #FFC061;
+}
+#myPin:hover {
+    color: #FFC061;
+}
 
 .icon #calendar-icon:hover {
     content: url("../../images/icon_calendar-hover.png");
@@ -157,7 +160,7 @@ li::marker {
 /* 메인 */
 .course_detail {
     margin: 1%;
-    width : 750px;
+    width : 40%;
     text-align: center;
     vertical-align: middle;
 }
@@ -274,7 +277,7 @@ a[aria-selected='false'] {
     text-align: left;
 }
 #userAfterCourseDate1 {
-    color: #ddd;
+    color: #7B7B7B;
 }
 /* 전체 버튼 */
 .btn-primary {
@@ -295,7 +298,6 @@ a[aria-selected='false'] {
     transition: width 0.3s ease;
     z-index: 2;
 }
-
 .sidebar-arrow-container .sidebar-toggle {
     position: absolute;
     top: 50vh;
@@ -314,4 +316,34 @@ a[aria-selected='false'] {
 }
 .sidebar-container.open {
     width: 200px;
+}
+/* 장소 리스트 */
+#reviewContents {
+    margin-top: 4%;
+    height: 420px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* 스크롤바 가로길이 */
+#reviewContents::-webkit-scrollbar {
+    width: 10px;
+}
+/* 스크롤바 바영역 색상 */
+#reviewContents::-webkit-scrollbar-thumb {
+    background-color: #40a0ff;
+    border-radius: 5px;
+}
+/* 스크롤바 스크롤영역 색상 */
+#reviewContents::-webkit-scrollbar-track {
+    background-color: #E1E1E1;
+    border-radius: 5px;
+}
+/* 리뷰 리스트 */
+#reviewDetailList {
+    margin-left: -6%;
+}
+#reviewDetailList li {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    border-bottom: 2px solid #E1E1E1;
 }

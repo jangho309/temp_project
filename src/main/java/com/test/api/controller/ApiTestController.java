@@ -67,6 +67,14 @@ public class ApiTestController {
         return mav;
     }
 
+    @GetMapping("/courseHomeReview2")
+    public ModelAndView courseHomeReview2() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("courseHomeReview2");
+
+        return mav;
+    }
+
     @GetMapping("/userPage")
     public ModelAndView userPage() {
         ModelAndView mav = new ModelAndView();
@@ -127,6 +135,14 @@ public class ApiTestController {
     public ModelAndView myCourse() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("myCourse");
+
+        return mav;
+    }
+
+    @GetMapping("/myCourse2")
+    public ModelAndView myCourse2() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("myCourse2");
 
         return mav;
     }

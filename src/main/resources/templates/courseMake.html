@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextPin courseMake</title>
+    <title>NextPin</title>
     <!--jQuery UI CSS 파일-->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
     <!--jQuery 기본 js파일-->
@@ -21,60 +21,62 @@
     <!-- 파비콘 설정 -->
     <link rel="icon" type="image/png" href="../images/NP_pavicon.png">
     <!-- 사이드바 스타일 시트 적용 -->
-    <link rel="stylesheet" href="css/html_apply/side-bar_style.css">
+    <link rel="stylesheet" href="css/html_apply/side-bar_style_mingyo.css">
     <!--courseMake JavaScript 연동-->
     <script src="js/courseMake.js"></script>
 </head>
 <body>
 <div class="container">
     <!-- 사이드바 -->
-    <div id="side-bar">
-        <li id="title">
-            <!-- 메인화면으로 이동 -->
-            <a href="main">
-                <img src="../images/NP_icon.png" alt="NP아이콘">
-            </a>
-        </li>
-        <!-- 메뉴들 -->
-        <div id="icons">
-            <li class="icon">
-                <!-- 코스로 이동 -->
-                <a href="mainCourse">
-                    <img src="../images/pin-hover.png" alt="코스아이콘" id="couse-icon">
-                    <span>코스</span>
+    <nav id="side-bar">
+        <div class="wrapper">
+            <div id="title">
+                <!-- 메인화면으로 이동 -->
+                <a href="main" class="link">
+                    <img src="../images/NP_icon.png" alt="NP아이콘">
                 </a>
-            </li>
-            <li class="icon">
-                <!-- 일정으로 이동 -->
-                <a href="calendar">
-                    <img src="../images/icon_calendar.png" alt="일정아이콘" id="calendar-icon">
-                    <span>일정</span>
-                </a>
-            </li>
-            <li class="icon">
-                <!-- 커뮤니티로 이동 -->
-                <a href="community">
-                    <img src="../images/icon_community.png" alt="커뮤니티아이콘" id="community-icon">
-                    <span id="community-span">커뮤니티</span>
-                </a>
-            </li>
-            <li class="icon">
-                <!-- 랜덤핀으로 이동 -->
-                <a href="randomPin">
-                    <img src="../images/icon_random.png" alt="랜덤아이콘" id="random-icon">
-                    <span>랜덤핀</span>
-                </a>
-            </li>
+            </div>
+            <!-- 메뉴들 -->
+            <div id="icons">
+                <div class="icon menu">
+                    <!-- 코스로 이동 -->
+                    <a href="mainCourse" class="link">
+                        <img src="../images/pin-hover.png" alt="코스아이콘" id="course-icon">
+                        <span>코스</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 일정으로 이동 -->
+                    <a href="calendar" class="link">
+                        <img src="../images/icon_calendar.png" alt="일정아이콘" id="calendar-icon">
+                        <span>일정</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 커뮤니티로 이동 -->
+                    <a href="community" class="link">
+                        <img src="../images/icon_community.png" alt="커뮤니티아이콘" id="community-icon">
+                        <span id="community-span">커뮤니티</span>
+                    </a>
+                </div>
+                <div class="icon menu">
+                    <!-- 랜덤핀으로 이동 -->
+                    <a href="randomPin" class="link">
+                        <img src="../images/icon_random.png" alt="랜덤아이콘" id="random-icon">
+                        <span>랜덤핀</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div id="profile">
-            <li>
+            <li class="menu">
                 <!-- 로그인으로 이동 -->
-                <a href="login">
+                <a href="login" class="link">
                     <img src="../images/profile.png" alt="기본 프로필 이미지">
                 </a>
             </li>
         </div>
-    </div>
+    </nav>
 
     <div class="content">
         <div class="content-inner">
@@ -83,7 +85,7 @@
                     <input type="text" placeholder="장소명, 주소" class="search-input" id="searchInput">
                     <!--검색 버튼: 돋보기.svg-->
                     <button class="search-button" onclick="searchAndDisplay(); toggleBanners(); searchPlaces(); toggleList();">
-                        <img src="images/icon_glasses.png" alt="검색">
+                        <img src="images/Search-Button.svg" alt="검색">
                     </button>
                 </div>
             </div>
@@ -101,30 +103,25 @@
                 <img src="images/cafe_banner.png" alt="카페배너">
             </button>
             <button class="sight banner">
-                <img src="images/icon_tourPlace.png" alt="관광지배너">
+                <img src="images/site_banner.png" alt="관광지배너">
             </button>
             <button class="hotel banner">
                 <img src="images/hotel_banner.png" alt="숙소배너">
             </button>
         </div>
-        <!--장소 검색 후 장소 목록-->
-        <div id="menu_wrap" class="bg_white">
-            <ul id="placesList"></ul>
-            <div id="pagination"></div>
-        </div>
+            <!--장소 검색 후 장소 목록-->
+            <div id="menu_wrap" class="bg_white">
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
     </div>
-    <!-- 사이드바 감추기/보이기 버튼 -->
-    <div class="sidebar-arrow-container">
-        <div class="sidebar-toggle">
-            <img class="arrow-icon" src="../images/icon_toggleButton_arrow.png" alt="toggle icon">
-        </div>
-    </div>
+
+
     <!--지도-->
     <div class="map_wrap">
-        <div id="map" style="width:200%;height:100vh;position:relative;overflow:hidden;"></div>
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
 
     </div>
-</div>
 <!--카카오맵 불러오기-->
     <script>
         var placeData = [];
@@ -378,7 +375,7 @@
                 el.removeChild (el.lastChild);
             }
         }
-        <!-- 사이드바 감추기/보이기 버튼 기능 -->
+
         window.onload = function(){
             searchPlaces();
             // printResult();
@@ -401,22 +398,20 @@
                 });
             });
 
-            const sidebar = $('.content');
-            const sidebarToggle = $('.sidebar-toggle');
-            let isExpand = false;
+            kakao.maps.event.addListener(map, 'center_changed', function() {
 
-            sidebarToggle.on('click', () => {
-                isExpand = !isExpand;
-                sidebar.toggle('open');
+                // 지도의  레벨을 얻어옵니다
+                var level = map.getLevel();
 
-                if(isExpand) {
-                    $('.sidebar-toggle img').css({'transform': 'rotate(180deg)'});
-                    return;
-                }
+                // 지도의 중심좌표를 얻어옵니다
+                var latlng = map.getCenter();
 
-                $('.sidebar-toggle img').css({'transform': 'rotate(0deg)'});
-                // sidebarContainer.classList.toggle('open');
-                // sidebarArrowContainer.classList.toggle('open');
+                var message = '<p>지도 레벨은 ' + level + ' 이고</p>';
+                message += '<p>중심 좌표는 위도 ' + latlng.getLat() + ', 경도 ' + latlng.getLng() + '입니다</p>';
+
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = message;
+
             });
         };
     </script>
